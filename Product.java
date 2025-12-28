@@ -12,37 +12,15 @@ public class Product {
         this.available = available;
     }
 
-    public String getName() {
-        return name;
-    }
+    public String getName() { return name; }
+    public int getPrice() { return price; }
+    public String getCategory() { return category; }
+    public boolean isAvailable() { return available; }
 
-    public int getPrice() {
-        return price;
-    }
-
-    public String getCategory() {
-        return category;
-    }
-
-    public boolean isAvailable() {
-        return available;
-    }
-
-    public void setName(String name) {
-        this.name = name;
-    }
-
-    public void setPrice(int price) {
-        this.price = price;
-    }
-
-    public void setCategory(String category) {
-        this.category = category;
-    }
-
-    public void setAvailable(boolean available) {
-        this.available = available;
-    }
+    public void setName(String name) { this.name = name; }
+    public void setPrice(int price) { this.price = price; }
+    public void setCategory(String category) { this.category = category; }
+    public void setAvailable(boolean available) { this.available = available; }
 
     public void applyDiscount(int percent) {
         price = price - (price * percent / 100);
@@ -54,12 +32,7 @@ public class Product {
 
     @Override
     public String toString() {
-        return name + " (" + category + ") - " + price + " KZT";
+        return name + " (" + category + ") - " + price + " KZT, Available: " + available;
     }
 }
 
-@Override
-    public String toString() {
-        return name + " - " + price + " KZT";
-    }
-}
